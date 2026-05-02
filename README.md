@@ -1,23 +1,36 @@
 
-# Containzer the Application
+# 🟢 3. README — branch3 (CI with GitHub Actions)
 
+# ⚙️ Step 3: CI using GitHub Actions
 
-In branch 1, we ran our application locally. In this branch 2, we contianzer our application. 
+## 📌 Objective
 
-build:
-```docker
-docker build -t my-image .
+Automate build and push Docker image to DockerHub.
+
+## 🧠 What This Step Covers
+
+* GitHub Actions CI
+* Docker build & push
+* Secrets management
+
+## 🔐 Required Secrets
+
+Add in GitHub:
+
+* DOCKERHUB_USERNAME
+* DOCKERHUB_TOKEN
+
+## 🔁 Workflow
+
+```
+Git Push → GitHub Actions → Build → Push to DockerHub
 ```
 
-run:
-```docker
-docker run -itd -p 8080:8080 my-image
-```
+## ✅ Output
 
-Open port:
-- 5000
-- You can check logs: docker logs container_id
+* Docker image pushed automatically
+* Tagged using GitHub run ID
 
-Delete container:
+## 🔚 Next Step
 
-
+👉 Move to **main branch** for full CI/CD with Helm + ArgoCD.
