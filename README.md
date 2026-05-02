@@ -2,14 +2,25 @@
 1-May-2026
 
 
-# Local Development 
+# Containzer the Application
 
-In branch 1, we run our application locally. 
 
-### ▶️ Run locally
+In branch 1, we ran our application locally. In this branch 2, we contianzer our application. 
 
-```bash
-go run main.go
+build:
+```docker
+docker build -t my-image .
 ```
 
-<img width="1600" height="820" alt="image" src="https://github.com/user-attachments/assets/379289e7-fd18-46fa-8573-db1a415bcb5a" />
+run:
+```docker
+docker run -itd -p 8080:8080 my-image
+```
+
+Open port:
+- 5000
+- You can check logs: docker logs container_id
+
+Delete container:
+
+
