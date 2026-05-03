@@ -1,22 +1,63 @@
-# go-web-app-devops
-1-May-2026
 
+# 🟢 4. README — main (FULL PROJECT)
 
-### ▶️ Run locally
+# 🚀 End-to-End DevOps Project (CI/CD + GitOps)
 
-```bash
-go run main.go
+## 📌 Objective
+
+Build complete pipeline:
+
+```
+GitHub → GitHub Actions → DockerHub → Helm → ArgoCD → Kubernetes
 ```
 
-Open:
+## 🧠 Flow
 
-```text
-http://localhost:8080
-```
+1. Code pushed to GitHub
+2. GitHub Actions builds image
+3. Image pushed to DockerHub
+4. Helm chart updated with new tag
+5. ArgoCD detects change
+6. Kubernetes deploys new version
 
-# ▶️ Build & Run with Docker
+## 🧱 Tech Stack
 
-```bash
-docker build -t go-app .
-docker run -p 8080:8080 go-app
-```
+* Go (Application)
+* Docker
+* GitHub Actions (CI/CD)
+* DockerHub
+* Kubernetes
+* Helm
+* ArgoCD (GitOps)
+
+## ⚙️ Pipeline Stages
+
+* Build
+* Test
+* Code Quality
+* Docker Build & Push
+* Update Helm Chart
+* ArgoCD Deployment
+
+## 🔐 Secrets Required
+
+* DOCKERHUB_USERNAME
+* DOCKERHUB_TOKEN
+* TOKEN (GitHub PAT)
+
+## 📦 Helm
+
+* Uses dynamic image tag
+* Updated automatically via pipeline
+
+## 🔥 Result
+
+Fully automated deployment pipeline (Production-style)
+
+## 🏁 Outcome
+
+You can:
+
+* Build CI/CD pipelines
+* Work with GitOps (ArgoCD)
+* Manage Kubernetes deployments using Helm
